@@ -1,4 +1,4 @@
-kk# 🐍 Python Projects
+# 🐍 Python Projects
 
 A collection of Python projects built from scratch while learning computer science fundamentals — data structures, algorithms, OOP, and CLI applications.
 
