@@ -8,35 +8,35 @@ Each project is self-contained with its own source file and documentation.
  
 ## 📂 Projects
  
-### 🗂️ [Hash Table](./hash_table/)
+### 🗂️ [Hash Table](./hash-table/)
 A hash table implemented from scratch with a custom hashing function and collision handling via chaining.
  
 **Concepts:** hashing, collision resolution, nested dictionaries, O(1) average lookup
  
 ---
  
-### 🔍 [Binary Search](./binary_search/)
+### 🔍 [Binary Search](./binary-search/)
 Binary search algorithm with path tracking to visualize how the search space is halved at each step.
  
 **Concepts:** divide and conquer, O(log n) complexity, sorted arrays
  
 ---
  
-### 🔐 [Caesar Cipher](./caesar_cipher/)
+### 🔐 [Caesar Cipher](./caesar-cipher/)
 CLI tool to encrypt and decrypt messages using the Caesar cipher.
  
 **Concepts:** string manipulation, modular arithmetic, CLI input/output
  
 ---
  
-### 💰 [Budget App](./budget_app/)
+### 💰 [Budget App](./budget-app/)
 Track income and expenses across multiple categories with a formatted ledger and spending chart.
  
 **Concepts:** OOP, class design, string formatting, data visualization in terminal
  
 ---
  
-### 📧 [Email Simulator](./email_simulator/)
+### 📧 [Email Simulator](./python-email-simulator/)
 Simulation of a basic email client — send, read, and delete emails using OOP principles.
  
 **Concepts:** OOP, class methods, list manipulation, encapsulation
