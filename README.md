@@ -1,4 +1,4 @@
-# 🐍 Python Projects
+k# 🐍 Python Projects
 
 A collection of Python projects built from scratch while learning computer science fundamentals — data structures, algorithms, OOP, and CLI applications.
 
@@ -26,6 +26,20 @@ Binary search algorithm with path tracking to visualize how the search space is 
 Square root calculator using the bisection method — finds the root by narrowing an interval until it converges within a specified tolerance.
 
 **Concepts:** bisection method, interval narrowing, convergence, tolerance control
+
+---
+
+### ⚡ [QuickSort](./quicksort/)
+An optimized 3-way partitioning QuickSort algorithm that efficiently handles datasets with heavy duplicate values by isolating identical elements.
+
+**Concepts:** divide and conquer, 3-way partitioning, recursion, O(n log n) average complexity
+
+---
+
+### 🧩 [Merge Sort](./mergesort/)
+A stable and highly predictable sorting algorithm that recursively splits an array down the middle and merges the sorted halves back together in-place.
+
+**Concepts:** divide and conquer, stable sorting, in-place mutation, guaranteed O(n log n) complexity
 
 ---
 
