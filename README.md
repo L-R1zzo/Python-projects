@@ -50,6 +50,13 @@ A comparison-based sorting algorithm that repeatedly finds the minimum element i
  
 ---
  
+### 💳 [Luhn Algorithm](./luhn-algorithm/)
+Credit card number validator using the Luhn checksum algorithm — the same method used by Visa, Mastercard, and every major payment processor.
+ 
+**Concepts:** string manipulation, list reversal, modular arithmetic, checksum validation
+ 
+---
+ 
 ### 🔐 [Caesar Cipher](./caesar-cipher/)
 CLI tool to encrypt and decrypt messages using the Caesar cipher.
  
@@ -78,3 +85,4 @@ Simulation of a basic email client — send, read, and delete emails using OOP p
 ## 📌 About
  
 These projects are part of my learning path toward a career in cybersecurity and low-level programming. Built while completing the [freeCodeCamp Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/) curriculum.
+ 
