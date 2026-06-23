@@ -1,45 +1,47 @@
 # 🗼 Tower of Hanoi Solver
 
-Un risolutore algoritmico in **Python** per il classico rompicapo matematico della **Torre di Hanoi**, implementato tramite ricorsione.
+A recursive implementation in **Python** of the classic mathematical puzzle, the **Tower of Hanoi**. 
 
-Questo script non solo risolve il problema per un numero arbitrario di dischi, ma **fotografa e stampa lo stato reale dei tre pali ad ogni singola mossa**, rendendo facilissimo visualizzare lo scorrere dell'algoritmo.
+Unlike standard solvers that only output text instructions (e.g., *"Move disk from A to C"*), this script **visually tracks and prints the actual physical state of the three rods at every single step**, making the call stack flow incredibly easy to follow.
 
-## 📋 Indice
-- [Descrizione del Problema](#-descrizione-del-problema)
-- [Logica dell'Algoritmo](#-logica-dellalgoritmo)
-- [Codice Sorgente](#-codice-sorgente)
-- [Esempio di Output](#-esempio-di-output)
-
----
-
-## 🧩 Descrizione del Problema
-La Torre di Hanoi è un puzzle composto da tre pali e $N$ dischi di dimensioni decrescenti. L'obiettivo è spostare l'intera torre dal primo all'ultimo palo rispettando tre rigide regole:
-1. Si può spostare **solo un disco alla volta**.
-2. Si può prendere solo il disco che si trova in cima a un palo.
-3. **Nessun disco può mai essere appoggiato sopra un disco più piccolo**.
+## 📋 Table of Contents
+- [The Problem](#-the-problem)
+- [Algorithm Logic](#-algorithm-logic)
+- [Source Code](#-source-code)
+- [Output Example](#-output-example)
 
 ---
 
-## 🧠 Logica dell'Algoritmo
-Il codice applica il principio ricorsivo del *Divide et Impera* (la metafora del "Capo Pigro"): per spostare $N$ dischi dalla Sorgente alla Destinazione usando un Appoggio:
-
-1. **Subappalto 1:** Sposta i primi $N-1$ dischi dalla *Sorgente* all'*Appoggio*.
-2. **Mossa del Capo:** Sposta l'unico disco gigante rimasto dalla *Sorgente* alla *Destinazione*.
-3. **Subappalto 2:** Sposta i dischi $N-1$ parcheggiati sull'*Appoggio* sopra al disco gigante sulla *Destinazione*.
+## 🧩 The Problem
+The Tower of Hanoi is a puzzle consisting of three rods and $N$ disks of decreasing size. The objective is to move the entire stack from the starting rod to the target rod, obeying three strict rules:
+1. Only **one disk** can be moved at a time.
+2. You can only move the **topmost disk** of a rod.
+3. **No disk may ever be placed on top of a smaller disk**.
 
 ---
 
-## 💻 Codice Sorgente
+## 🧠 Algorithm Logic
+The solution relies on the recursive **Divide and Conquer** principle. To move $N$ disks from `source` to `destination` using a `pivot` rod:
+
+1. **Step 1:** Recursively move the top $N-1$ disks from `source` to `pivot`.
+2. **Step 2:** Move the remaining largest disk directly from `source` to `destination`.
+3. **Step 3:** Recursively move the $N-1$ disks sitting on the `pivot` onto the largest disk on `destination`.
+
+The base case occurs when $N = 1$, where the single remaining disk is moved immediately.
+
+---
+
+## 💻 Source Code
 
 ```python
 def hanoi_solver(disks: int):
-    # I 3 pali fisici fissi
+    # The 3 fixed physical rods
     first_road = list(range(1, disks + 1))[::-1]
     second_road = []
     third_road = []
     moves = []
     
-    # Core ricorsivo (i ruoli dei pali cambiano ad ogni livello)
+    # Recursive core (rod roles shift at each level of the stack)
     def hanoi(disks, source, destination, pivot):
         if disks == 1:
             destination.append(source.pop())
@@ -53,7 +55,7 @@ def hanoi_solver(disks: int):
         
         hanoi(disks - 1, pivot, destination, source)
 
-    # Scatta la foto iniziale e avvia la ricorsione
+    # Capture initial state and trigger recursion
     moves.append(f"{first_road} {second_road} {third_road}")
     hanoi(disks, first_road, third_road, second_road)
     
@@ -65,17 +67,17 @@ if __name__ == "__main__":
 
 ---
 
-## 📊 Esempio di Output (3 dischi)
+## 📊 Output Example (3 Disks)
 
-I numeri all'interno delle liste rappresentano la grandezza del disco (`3` è il più grande alla base, `1` è il più piccolo in cima):
+The integers represent the disk size (`3` being the largest at the bottom, `1` being the smallest at the top):
 
 ```text
-[3, 2, 1] [] []         <-- Stato Iniziale (Tutto sul Palo 1)
+[3, 2, 1] [] []         <-- Initial State (All disks on Rod 1)
 [3, 2] [] [1]
 [3] [2] [1]
 [3] [2, 1] []
-[] [2, 1] [3]           <-- Il disco gigante 3 arriva a destinazione
+[] [2, 1] [3]           <-- The largest disk (3) hits the target rod
 [1] [2] [3]
 [1] [] [3, 2]
-[] [] [3, 2, 1]         <-- Stato Finale (Risolto!)
+[] [] [3, 2, 1]         <-- Final State (Solved!)
 ```
