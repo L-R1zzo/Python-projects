@@ -49,6 +49,13 @@ A comparison-based sorting algorithm that repeatedly finds the minimum element i
 **Concepts:** nested loops, index tracking, in-place swapping, O(n²) complexity
  
 ---
+
+### 🗼 [Tower of Hanoi](./hanoi-tower/)
+A recursive solver for the classic mathematical puzzle that visually tracks and outputs the physical state of the three rods at every single move.
+
+**Concepts:** recursion, divide and conquer, call stack tracking, state visualization
+
+---
  
 ### 💳 [Luhn Algorithm](./luhn-algorithm/)
 Credit card number validator using the Luhn checksum algorithm — the same method used by Visa, Mastercard, and every major payment processor.
@@ -82,7 +89,7 @@ Simulation of a basic email client — send, read, and delete emails using OOP p
  
 - Python 3
 - No external libraries
+
 ## 📌 About
  
 These projects are part of my learning path toward a career in cybersecurity and low-level programming. Built while completing the [freeCodeCamp Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/) curriculum.
- 
