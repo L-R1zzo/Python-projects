@@ -8,6 +8,13 @@ Each project is self-contained with its own source file and documentation.
  
 ## 📂 Projects
  
+### 🕸️ [Adjacency List to Matrix](./aatrix-converter/)
+Converts a graph represented as an adjacency list into an adjacency matrix — two different ways to represent the same graph, each with different space and lookup tradeoffs.
+ 
+**Concepts:** graphs, adjacency list, adjacency matrix, space complexity tradeoffs
+ 
+---
+ 
 ### 🗂️ [Hash Table](./hash-table/)
 A hash table implemented from scratch with a custom hashing function and collision handling via chaining.
  
@@ -49,12 +56,12 @@ A comparison-based sorting algorithm that repeatedly finds the minimum element i
 **Concepts:** nested loops, index tracking, in-place swapping, O(n²) complexity
  
 ---
-
+ 
 ### 🗼 [Tower of Hanoi](./hanoi-tower/)
 A recursive solver for the classic mathematical puzzle that visually tracks and outputs the physical state of the three rods at every single move.
-
+ 
 **Concepts:** recursion, divide and conquer, call stack tracking, state visualization
-
+ 
 ---
  
 ### 💳 [Luhn Algorithm](./luhn-algorithm/)
@@ -89,7 +96,7 @@ Simulation of a basic email client — send, read, and delete emails using OOP p
  
 - Python 3
 - No external libraries
-
 ## 📌 About
  
 These projects are part of my learning path toward a career in cybersecurity and low-level programming. Built while completing the [freeCodeCamp Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/) curriculum.
+ 
