@@ -21,4 +21,4 @@ def hanoi_solver(disks: int):
     hanoi(disks, first_road, third_road, second_road)
     return "\n".join(moves)
 
-print(hanoi_solver(4))
+print(hanoi_solver(5))
