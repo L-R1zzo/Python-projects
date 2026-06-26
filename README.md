@@ -92,11 +92,15 @@ Simulation of a basic email client — send, read, and delete emails using OOP p
  
 ---
  
+### 🔎 [Depth-First Search](./dfs-algorithm/)
+Iterative DFS graph traversal using an adjacency matrix and an explicit stack — visits every reachable node going as deep as possible before backtracking.
+ 
+**Concepts:** graphs, DFS, adjacency matrix, iterative stack, O(V²) complexity
+ 
+---
+ 
 ## 🛠️ Tech
  
 - Python 3
 - No external libraries
-## 📌 About
- 
-These projects are part of my learning path toward a career in cybersecurity and low-level programming. Built while completing the [freeCodeCamp Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/) curriculum.
- 
+
